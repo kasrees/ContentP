@@ -1,0 +1,72 @@
+@import '../../../assets/scss/variables';
+
+h2 {
+    color: $textPrimary;
+}
+
+.page-name-field {
+    width: 820px;
+    margin-top: 32px;
+}
+
+.es-form-field {
+    margin-bottom: 24px;
+}
+
+.attributing-card {
+    margin-bottom: 32px;
+    overflow: hidden;
+  
+    &:first-of-type {
+      margin-top: 32px;
+    } 
+}
+
+.attributing-card>:first-child.es-form-field {
+    margin-top: 15px;
+}
+
+.attributing-card>:last-child.es-form-field.es-text-area {
+    margin-bottom: 24px;
+}
+
+.remark {
+    display: flex;
+    padding: 16px 16px 4px 16px;
+    margin-bottom: 32px;
+    margin-top: 48px;
+    background-color: #e5f4ff;
+    border: 1px solid #d9edff;
+    border-radius: 4px;
+    gap: 14px;
+    
+    &__text {
+        color: $textPrimary;
+    }
+
+    &__text-item {
+        margin-bottom: 5px;
+    }
+
+    &__text-paragraph {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+}
+
+.hints-list {
+    margin-bottom: 16px;
+    color: $primary;
+
+    &__item {
+        margin-bottom: 3px;
+    }
+}
+
+.es-divider {
+    background-color: #e1eaf2;
+}
+
+.error {
+    margin-top: 25px;
+}

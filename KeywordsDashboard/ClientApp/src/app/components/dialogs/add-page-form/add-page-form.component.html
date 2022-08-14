@@ -1,0 +1,30 @@
+<div class="dialog-title" mat-dialog-title>Атрибутирование страницы личного кабинета TravelLine</div>
+<aside class="separator separator_top"></aside>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-dialog-content>
+        <mat-form-field class="es-form-field full-width" appearance="fill">
+            <mat-icon class="es-icon" matPrefix>link</mat-icon>
+            <mat-label class="es-input-label">Ссылка на страницу</mat-label>
+            <input 
+                class="es-input"
+                matInput 
+                formControlName="link"
+                required
+                (paste)="onPasteEvent($event)"
+                (keyup)="onKeyupEvent($event)"
+            >
+        </mat-form-field>
+        <mat-error *ngIf="form.controls.link.touched">
+            <span *ngIf="form.controls.link.errors?.required">Пожалуйста, заполните поле</span>
+            <span *ngIf="form.controls.link.errors?.anyError">Произошла ошибка. Повторите позже.</span>
+            <span *ngIf="form.controls.link.errors?.conflict">Такая страница уже атрибутирована. Пожалуйста, введите ссылку неатрибутированной страницы.</span>
+            <span *ngIf="form.controls.link.errors?.linkAlredyExists">Пожалуйста, введите ссылку неатрибутированной страницы</span>
+            <span *ngIf="form.controls.link.errors?.pattern">Пожалуйста, введите ссылку в корректном формате.<br>Проверьте выглядит ли начало ссылки так: https://www.travelline.ru/secure/Extranet/#/</span>
+        </mat-error>
+    </mat-dialog-content>
+    <aside class="separator separator_bottom"></aside>
+    <mat-dialog-actions>
+        <button class="button button_blue" mat-stroked-button type="submit">Сохранить и продолжить</button>
+        <button class="button" matDialogClose mat-stroked-button (click)="dialog.close(false)">Отменить</button>
+    </mat-dialog-actions>
+</form>

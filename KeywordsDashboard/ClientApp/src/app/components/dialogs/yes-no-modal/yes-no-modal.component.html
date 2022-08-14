@@ -1,0 +1,13 @@
+<div class="dialog-title" mat-dialog-title>{{data.heading}}</div>
+<aside class="separator"></aside>
+<mat-dialog-content class="dialog-content" matDialogContent>
+    <div class="dialog-content">
+        <mat-icon class="dialog-content__icon">warning</mat-icon>
+        <div class="dialog-content__text">{{data.message}}</div>
+    </div>
+</mat-dialog-content>
+<aside class="separator"></aside>
+<mat-dialog-actions>
+    <button class="button button_blue" matDialogClose mat-stroked-button (click)="dialog.close(false)">{{data.buttonYesCaption}}</button>
+    <button class="button" matDialogClose mat-stroked-button (click)="dialog.close(true)">{{data.buttonNoCaption}}</button>
+</mat-dialog-actions>

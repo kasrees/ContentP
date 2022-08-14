@@ -1,0 +1,281 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/tl-theme';
+@import 'assets/scss/variables';
+/* Provide sufficient contrast against white background */
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: $baseFont;
+  min-width: 1440px;
+  background-color: $bgPrimary;
+  color: $primary;
+
+  &.-type-login {
+    background-color: $bgSecondary;
+  }
+}
+
+a {
+  color: $textAccent2;
+
+  &:not(.accent) {
+    &:hover {
+        color: $textPrimary;
+    }
+  }
+
+  &.accent {
+    color: $textAccentDark;
+  }
+}
+
+.layout {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.bottom {
+  body.-type-login & {
+    background-color: rgba(235, 240, 244, 0.3);
+  }
+}
+
+.es-button {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.mb {
+  &_25 {
+    margin-bottom: 25px;
+  }
+}
+
+.dialog-title {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  color: $primary;
+
+  &_large {
+    font-size: 24px;
+    font-weight: 700px;
+  }
+
+  &_center {
+    text-align: center;
+  }
+}
+
+.mat-icon.es-icon {
+  color: $iconSecondary;
+
+  &:hover {
+    color: $iconPrimary;
+  }
+}
+
+.button {
+  margin-right: 8px;
+  color: $accent2;
+  text-transform: uppercase;
+
+  &_blue {
+    color: #fff;  
+    background-color: $accent2;
+  }
+}
+
+.es-tooltip {
+  max-width: unset !important;
+  background-color: #000;
+  white-space: pre-line;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.separator {
+  height: 1px;
+  background-color: $add;
+  margin: 15px -24px 15px -24px;
+
+  &_bottom {
+    margin-bottom: 8px;
+  }
+
+  &_top {
+    margin-bottom: 32px;
+  }
+
+  &.-type-delete-page {
+    margin-bottom: 18px;
+  }
+
+  &.-type-detail-page {
+    margin-bottom: 32px;
+}
+}
+
+.es-form-field {
+.es-input {
+    font-size: 16px;
+    color: $textAdd;
+    line-height: 24px;
+    letter-spacing: 0.15px; 
+  
+    &:disabled {
+  color: $textAdd; 
+}
+  }
+}
+
+.es-input-label {
+  color: $textSecondary;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+
+  .es-form-field.mat-focused:not(.mat-form-field-invalid) & {
+    color: $accent2;
+  }
+   
+  .mat-form-field-should-float:not(.mat-form-field-invalid) & {
+    color:$textAdd2;
+  }
+
+  .mat-form-field-invalid & {
+    color: #e80000;
+  }
+}
+
+.es-input-hint {
+  color: $textAdd2;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+} 
+
+.es-secondary-text {
+  color: $textSecondary;
+
+  &:hover {
+    color: $textPrimary;
+  }
+}
+
+.dialog-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__icon {
+    &.mat-icon {
+      height: 65px;
+      width: 65px;
+      font-size: 65px;
+      color: #fdbe36;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+}
+
+.mat-form-field.mat-form-field-disabled .mat-form-field-flex {
+  background-color: #f1f4f8;
+}
+
+.mat-form-field .mat-form-field-flex {
+  background-color: #eaf1f9;
+}
+
+.es-chip {
+  color: $textAdd;
+  font-weight: 400;
+  line-height: 20px;
+
+  .mat-icon {
+    color: $iconSecondary;
+  }
+}
+
+.mat-form-field-ripple {
+  background-color: $accent2;
+
+  .mat-form-field.mat-focused:not(.mat-form-field-invalid) & {
+    background-color: $accent2;
+  }
+}
+
+.es-tab-label {
+  color: $textAccent2;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  opacity: 1;
+
+  .mat-tab-label-active & {
+    color: $textPrimary;
+  }
+}
+
+.es-tab-group {
+  .mat-tab-label {
+    opacity: 1;
+  }
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background: #4375ac;
+} 
+
+.words-expansion-panel {
+  .mat-content {
+    flex: none;
+  }
+
+  .mat-expansion-indicator {
+    &:after {
+      color: $accent2;
+    }
+  }
+}
+
+.es-dialog {
+  width: 800px;
+}
+
+.es-dialog-background {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f4f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 5px;
+}
+
+.es-dialog-background {
+  background-color: rgba(0, 0, 0, 0.4);
+}

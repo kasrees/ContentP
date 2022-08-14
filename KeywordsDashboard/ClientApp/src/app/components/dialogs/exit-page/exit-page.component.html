@@ -1,0 +1,14 @@
+<div class="dialog-title" mat-dialog-title>Вы не сохранили все изменения</div>
+<aside class="separator -type-delete-page"></aside>
+<mat-dialog-content class="dialog-content" matDialogContent>
+    <div class="dialog-content">
+        <mat-icon class="dialog-content__icon">warning</mat-icon>
+        <div class="dialog-content__text">Если вы уйдете, изменения во вкладке(ах) {{languages}} не сохранятся </div>
+    </div>
+</mat-dialog-content>
+<aside class="separator separator_bottom"></aside>
+<mat-dialog-actions>
+    <button class="button button_blue" matDialogClose mat-stroked-button (click)="dialog.close({event:'Save'})">Сохранить и уйти</button>
+    <button class="button" matDialogClose mat-stroked-button (click)="dialog.close({event:'Leave'})">Уйти без сохранения</button>
+    <button class="button" matDialogClose mat-stroked-button (click)="dialog.close({event:'Stay'})">Остаться</button>
+</mat-dialog-actions>

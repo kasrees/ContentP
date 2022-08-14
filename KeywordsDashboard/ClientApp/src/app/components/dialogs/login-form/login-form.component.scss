@@ -1,0 +1,13 @@
+.login-form {
+    &__error {
+        display: flex;
+        height: 56px;
+        padding: 16px;
+        margin-bottom: 24px;
+        gap: 14px;
+        align-items: center;
+        background: #FDE6E6;
+        border: 1px solid #FACCCC;
+        border-radius: 4px;
+    }
+}

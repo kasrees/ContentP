@@ -1,0 +1,12 @@
+.delete-page-dialog-content {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        margin-right: 16px;
+    }
+
+    &__text {
+        font-size: 16px;
+    }
+}

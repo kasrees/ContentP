@@ -1,0 +1,70 @@
+<mat-form-field class="es-form-field full-width" appearance="fill" hideRequiredMarker>
+    <mat-label class="es-input-label">Ключевые слова ({{languageName}})</mat-label>
+    <div [formGroup]="form">
+      <mat-chip-list 
+        #keywordsChipList 
+        formControlName="words" 
+        aria-label="Keywords subsequence"
+        cdkDropList 
+        cdkDropListOrientation="horizontal"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <mat-chip
+          class="es-chip"
+          [ngStyle]="{'background-color': 'transparent', 'border': '1px solid #a7b5ca'}"
+          *ngFor="let word of wordsControl"
+          cdkDrag
+          (removed)="remove(word)"
+          [removable]="true"
+        >
+          {{word.phrase}}
+          <button matChipRemove>
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip>
+        <input
+          placeholder="Новое слово..."
+          [matChipInputFor]="keywordsChipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          (matChipInputTokenEnd)="add($event)"
+          (input)="onInput()"
+        >
+      </mat-chip-list>
+    </div>
+    <mat-hint class="es-input-hint" align="start">Максимум 30 ключевых слов.</mat-hint>
+    <mat-error *ngIf="form.controls.words.errors">Пожалуйста, заполните поле</mat-error>
+</mat-form-field>
+<button class="button sort-button" mat-raised-button color="primaty" (click)="sortWords()" type="button" [disabled]="wordsControl.length <= 1">Сортировать</button>
+<div class="suggested-words-heading">
+    <span class="mat-body-2 suggested-words-heading__text">Предлагаемые ключевые слова</span>
+    <mat-icon class="es-icon">help</mat-icon>
+</div>
+<mat-chip-list #suggestedChipList aria-label="Suggested words">
+    <mat-chip 
+      [ngStyle]="{'background-color': 'transparent', 'border': '1px solid #a7b5ca'}"  
+      *ngFor="let suggestedWord of suggestedWords"
+      (removed)="moveSuggestedWordToKeywordsList(suggestedWord)"
+    >
+      {{suggestedWord.phrase}}
+      <button matChipRemove>
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-chip>
+</mat-chip-list>
+<mat-expansion-panel class="words-expansion-panel">
+  <mat-expansion-panel-header 
+    class="words-expansion-panel__header"
+    [ngStyle]="{
+      'color': '#296dc2',
+      'font-weight': '500',
+      'line-height': '16px',
+      'letter-spacing': '1.25px',
+      'text-transform':'uppercase',
+      'background':'none'
+    }"
+  >
+    <mat-panel-title class="words-expansion-panel__title">
+      Больше слов
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>

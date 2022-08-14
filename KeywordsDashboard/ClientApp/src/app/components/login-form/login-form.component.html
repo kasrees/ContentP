@@ -1,0 +1,28 @@
+<div mat-dialog-title class="dialog-title dialog-title_center">
+    <span class="dialog-title dialog-title_large block">Вход в админку</span>атрибутирования страниц личного кабинета TravelLine
+</div>
+<aside class="separator separator_top"></aside>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-error *ngIf="form.errors">
+        <div class="login-form__error" *ngIf="form.errors?.unauthtorized"><mat-icon class="es-table__warning-icon">warning</mat-icon><span>Неверный логин или пароль</span></div>
+        <div class="login-form__error" *ngIf="form.errors?.anyError"><mat-icon class="es-table__warning-icon">warning</mat-icon><span>Произошла ошибка. Повторите позже.</span></div>
+    </mat-error>
+    <mat-dialog-content>
+        <mat-error *ngIf="error">Неверный логин или пароль</mat-error>
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Логин</mat-label>
+            <input matInput formControlName="login" (keyup)="onKeyupEvent('login')" required>
+            <mat-error *ngIf="form.controls.login.invalid">Пожалуйста, заполните это поле</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Пароль</mat-label>
+            <input [type]="isPasswordHidden ? 'password' : 'text'" matInput formControlName="password" (keyup)="onKeyupEvent('password')"required>
+            <mat-icon class="es-icon" matSuffix (click)="toggleEyeIconVisibility()">{{isPasswordHidden ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-error *ngIf="form.controls.password.invalid">Пожалуйста, заполните это поле</mat-error>
+        </mat-form-field>
+    </mat-dialog-content>
+    <aside class="separator separator_bottom"></aside>
+    <mat-dialog-actions>
+        <button mat-stroked-button class="button button_blue" type="submit">Войти</button>
+    </mat-dialog-actions>
+</form>

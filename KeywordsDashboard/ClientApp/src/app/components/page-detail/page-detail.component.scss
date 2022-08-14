@@ -1,0 +1,19 @@
+.attributing-card>:first-child.attributing-field {
+    margin-top: 16px;
+}
+
+.attributing-card {
+    display: flex;
+    margin-top: 34px;
+    margin-bottom: 32px;
+    align-items: center;
+    gap: 8px;
+}
+
+.attributing-icon {
+    margin-right: 14px;
+}
+
+.error {
+    margin-top: 25px;
+}

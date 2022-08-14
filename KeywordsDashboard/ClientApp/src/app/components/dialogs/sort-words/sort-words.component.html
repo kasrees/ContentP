@@ -1,0 +1,12 @@
+<mat-dialog-content class="words-dialog" matDialogContent>
+    <div class="remark">
+        <mat-icon class="es-icon">info</mat-icon>
+        <div class="remark__text mat-body-2">Перетаскивайте слова мышкой, чтобы установить порядок слов.</div>
+    </div>
+    <div cdkDropList class="words-list" (cdkDropListDropped)="drop($event)">
+        <div class="words-box" *ngFor="let word of words" cdkDrag><mat-icon class="es-icon" matPrefix>more_vert</mat-icon>{{word.phrase}}</div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="button button_blue words-button" matDialogClose mat-stroked-button>Ok</button>
+</mat-dialog-actions>

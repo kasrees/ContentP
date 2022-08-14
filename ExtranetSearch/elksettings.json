@@ -1,0 +1,25 @@
+{
+  "ConnectionString": "http://elasticsearch7.travelline.lan:9200/",
+  "Username": "elastic",
+  "Password": "R+uIy+R+lL*-L+1qR3ea",
+  "CertificateFingerprint": "aeacd8dd8339b9d2004583879e9d7c3e8f555da814aae981c82c04b9c4b8cc70",
+  "DefaultIndex": "extranet-search",
+  "Indices": [
+    {
+      "IndexName": "extranet-search-russian",
+      "Analyzer": "russian",
+      "Language": {
+        "Language": "russian",
+        "LanguageShortName": "ru"
+      }
+    },
+    {
+      "IndexName": "extranet-search-english",
+      "Analyzer": "english",
+      "Language": {
+        "Language": "english",
+        "LanguageShortName": "en"
+      }
+    }
+  ]
+}

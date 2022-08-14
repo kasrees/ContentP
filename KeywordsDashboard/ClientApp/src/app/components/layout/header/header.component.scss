@@ -1,0 +1,37 @@
+.top {
+    background-color: #2e4560;
+}
+
+.top-nav {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 64px;
+    background-color: #2e4560;
+    padding: 3px 48px;
+    
+    &__logo {
+        display: inline-block;
+        margin-right: 16px;
+        width: 32px;
+    }
+
+    &__button {
+        display: inline-flex;
+        height: 100%;
+        padding: 16px;
+        align-items: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #a9C5e7;
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+        }
+
+        &_active {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+    }
+}

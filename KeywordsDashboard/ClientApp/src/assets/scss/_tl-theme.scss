@@ -1,0 +1,128 @@
+@use '@angular/material' as mat;
+
+$tl-primary-palette: (
+    50 : #e7eaee,
+    100 : #c4cbd5,
+    200 : #9ca8b9,
+    300 : #74859d,
+    400 : #576b88,
+    500 : #395173,
+    600 : #334a6b,
+    700 : #2c4060,
+    800 : #243756,
+    900 : #172743,
+    A100 : #82acff,
+    A200 : #4f8aff,
+    A400 : #1c68ff,
+    A700 : #0357ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$tl-accent-palette: (
+    50 : #e5edf8,
+    100 : #bfd3ed,
+    200 : #94b6e1,
+    300 : #6999d4,
+    400 : #4983cb,
+    500 : #296dc2,
+    600 : #2465bc,
+    700 : #1f5ab4,
+    800 : #1950ac,
+    900 : #0f3e9f,
+    A100 : #cfdcff,
+    A200 : #9cb8ff,
+    A400 : #6993ff,
+    A700 : #4f81ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$tl-warn-palette: (
+    50 : #fce0e0,
+    100 : #f8b3b3,
+    200 : #f48080,
+    300 : #ef4d4d,
+    400 : #eb2626,
+    500 : #e80000,
+    600 : #e50000,
+    700 : #e20000,
+    800 : #de0000,
+    900 : #d80000,
+    A100 : #ffffff,
+    A200 : #ffcdcd,
+    A400 : #ff9a9a,
+    A700 : #ff8080,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$tl-primary: mat.define-palette($tl-primary-palette, 500);
+$tl-accent: mat.define-palette($tl-accent-palette, 500, A100, A400);
+$tl-warn: mat.define-palette($tl-warn-palette);
+
+$tl-theme: mat.define-light-theme((
+  color: (
+    primary: $tl-primary,
+    accent: $tl-accent,
+    warn: $tl-warn,
+  )
+));
+
+$tl-typography: mat.define-typography-config(
+  $headline: mat.define-typography-level(34px, 36px, 400),
+  $title: mat.define-typography-level(24px, 24px, 400),
+  $body-1: mat.define-typography-level(14px, 20px, 400),
+  $body-2: mat.define-typography-level(14px, 20px, 700),
+  $caption: mat.define-typography-level(14px, 16px, 400),
+  $button: mat.define-typography-level(14px, 16px, 500)
+);
+
+@include mat.core($tl-typography);
+@include mat.all-component-themes($tl-theme);
+
+.dark-theme {
+  @include mat.all-component-colors($tl-theme);
+}

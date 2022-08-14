@@ -1,0 +1,62 @@
+@import '../../../assets/scss/variables';
+
+.burger-button {
+    width: 38px;
+    min-width: auto;
+    padding: 0;
+    border: 1px solid $primaryLight;
+
+    &:hover {
+        border-color: $accent2;
+    }
+}
+
+.menu-icon {
+    color: $iconAccent2;
+
+    &:hover {
+        color: $iconPrimary
+    }
+}
+
+.plus-icon {
+    position: relative;
+    bottom: 2px;
+    margin-right: 8px;
+}
+
+.es-table {
+    &__header {
+        color: $textPrimary;
+        background-color: #d7dce3;
+    }
+
+    &__cell {
+        color: $textPrimary;
+
+        &_empty {
+            background-color: $accentLight;
+        }
+    }
+
+    &__warning {
+        display: flex;
+        align-items: center;
+    }
+
+    &__warning-icon {
+        margin-right: 5px;
+        color: $iconAccentDark;
+        text-decoration: none;      
+    }
+
+    &__link-icon {
+        &:hover {
+            color: $iconPrimary;
+        }
+    }
+}
+
+h1 {
+    margin-bottom: 25px;
+}

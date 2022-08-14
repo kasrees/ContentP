@@ -1,0 +1,27 @@
+<h1>Атрибутирование страницы</h1>
+<mat-card class="attributing-card">
+    <mat-form-field class="es-form-field attributing-field full-width" appearance="fill">
+        <mat-icon class="es-icon attributing-icon" matPrefix>link</mat-icon>
+        <mat-label class="es-input-label">Cсылка на страницy</mat-label>
+        <input class="es-input" matInput disabled value="{{link}}">
+    </mat-form-field>
+    <a href="{{link}}" target="_blank">
+        <mat-icon 
+            class="es-icon"
+            matTooltip="{{setHintMessage('Перейти на страницу в ЛК TL по ссылке', link)}}"
+            matTooltipPosition="above"
+            matTooltipClass="es-tooltip"
+        >
+        open_in_new
+        </mat-icon>
+    </a>
+</mat-card>
+<mat-tab-group class="es-tab-group" animationDuration="0ms">
+    <mat-tab *ngFor="let pageTranslation of pageTranslations">
+        <ng-template mat-tab-label>
+            <span class="es-tab-label">{{pageTranslation.heading}}</span>
+        </ng-template>
+        <app-page-attributing-form [pageTranslation]="pageTranslation"></app-page-attributing-form>
+    </mat-tab>
+</mat-tab-group>
+<mat-error class="error" *ngIf="isError">Произошла ошибка. Повторите позже.</mat-error>

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullTextExtranetSearch", "ExtranetSearch\FullTextExtranetSearch.csproj", "{6CCFCFE4-B9E0-4D5D-8314-983DBE76474D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{9183A23E-CFF4-4AE6-B378-FDBB5AAFC486}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1CEB1FF7-744A-4399-8B89-2A2015C027E8} = {1CEB1FF7-744A-4399-8B89-2A2015C027E8}
+		{B76B58A6-1048-4811-9CD9-30DB973C2CB4} = {B76B58A6-1048-4811-9CD9-30DB973C2CB4}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{1CEB1FF7-744A-4399-8B89-2A2015C027E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{B76B58A6-1048-4811-9CD9-30DB973C2CB4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeywordsDashboard", "KeywordsDashboard\KeywordsDashboard.csproj", "{3B8637E3-DFCB-4755-8324-59E10A68DF64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scheduler", "Scheduler\Scheduler.csproj", "{4FAD3686-5F40-4EE6-88D7-7A5D1A863DAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CCFCFE4-B9E0-4D5D-8314-983DBE76474D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCFCFE4-B9E0-4D5D-8314-983DBE76474D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCFCFE4-B9E0-4D5D-8314-983DBE76474D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCFCFE4-B9E0-4D5D-8314-983DBE76474D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9183A23E-CFF4-4AE6-B378-FDBB5AAFC486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9183A23E-CFF4-4AE6-B378-FDBB5AAFC486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9183A23E-CFF4-4AE6-B378-FDBB5AAFC486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9183A23E-CFF4-4AE6-B378-FDBB5AAFC486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CEB1FF7-744A-4399-8B89-2A2015C027E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CEB1FF7-744A-4399-8B89-2A2015C027E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CEB1FF7-744A-4399-8B89-2A2015C027E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CEB1FF7-744A-4399-8B89-2A2015C027E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76B58A6-1048-4811-9CD9-30DB973C2CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76B58A6-1048-4811-9CD9-30DB973C2CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76B58A6-1048-4811-9CD9-30DB973C2CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76B58A6-1048-4811-9CD9-30DB973C2CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8637E3-DFCB-4755-8324-59E10A68DF64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8637E3-DFCB-4755-8324-59E10A68DF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8637E3-DFCB-4755-8324-59E10A68DF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8637E3-DFCB-4755-8324-59E10A68DF64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FAD3686-5F40-4EE6-88D7-7A5D1A863DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FAD3686-5F40-4EE6-88D7-7A5D1A863DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FAD3686-5F40-4EE6-88D7-7A5D1A863DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FAD3686-5F40-4EE6-88D7-7A5D1A863DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84204A4A-5026-42A8-AD28-8A528A111EA8}
+	EndGlobalSection
+EndGlobal

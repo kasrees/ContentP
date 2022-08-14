@@ -1,0 +1,47 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-card class="attributing-card">
+        <h2>Название и описание страницы ({{languageName}})</h2>
+        <mat-divider class="es-divider"></mat-divider>
+        <mat-form-field class="es-form-field page-name-field" appearance="fill" hideRequiredMarker>
+            <mat-label class="es-input-label">Название страницы</mat-label>
+            <input class="es-input -type-page-name" matInput formControlName="title" (input)="onInput('title')">
+            <mat-hint class="es-input-hint" align="start">Скопируйте название страницы из личного кабинета TravelLine. Название показывается в личном кабинете TL в результатах поиска.</mat-hint>
+            <mat-error *ngIf="form.controls.title.errors">
+                <span>Пожалуйста, заполните поле</span>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="es-form-field es-text-area full-width" appearance="fill">
+            <mat-label class="es-input-label">Описание страницы</mat-label>
+            <textarea class="es-input" #description matInput formControlName="description" maxlength="200"></textarea>
+            <mat-hint class="es-input-hint" align="start">Напишите кратко, что можно настроить на странице. Описание показывается в личном кабинете TL в результатах поиска.</mat-hint>
+            <mat-hint align="end">{{description.value?.length || 0}}/200</mat-hint>
+        </mat-form-field>
+    </mat-card>
+    <mat-card class="attributing-card">
+        <h2>Ключевые слова ({{languageName}})</h2>
+        <mat-divider class="es-divider"></mat-divider>
+        <div class="remark">
+            <mat-icon class="es-icon">info</mat-icon>
+            <div class="remark__text">
+                <p>
+                    <span class="mat-body-2">Ключевые слова — это слова и фразы, по которым можно найти страницу в личном кабинете TravelLine.</span><br>
+                    Подумайте о том, как пользователи будут искать страницу, и подберите соответствующие слова запросов.
+                </p>
+                <div class="remark__text-paragraph">
+                    <div class="remark__text-item"><span class="mat-body-2">Существительные.</span> Используйте существительные в единственном ИЛИ множественном числе (тариф, скидка, налоги).</div> 
+                    <div class="remark__text-item"><span class="mat-body-2">Глаголы.</span> Для описания действий используйте неопределенную форму глаголов (создать, редактировать, удалить).</div>
+                    <div class="remark__text-item"><span class="mat-body-2">Фразы.</span> Вводите фразы из двух или более слов как словосочетания и как отдельные слова (тариф, создать тариф, создать).</div>
+                    <div class="remark__text-item"><span class="mat-body-2">Порядок ключевых слов имеет решающее значение.</span> Сначала указывайте наиболее подходящие слова или фразы.</div>
+                </div>
+            </div>
+        </div>
+        <ul class="hints-list">
+            <li class="hints-list__item">Кликайте по тегам ниже, чтобы добавить их в поле "Ключевые слова".</li>
+            <li class="hints-list__item">Не нашли нужное слово в тегах ― вводите вручную слово или фразу и нажимайте Enter.</li>
+            <li class="hints-list__item">Чтобы изменить порядок слов, нажмите кнопку "Сортировать" и перетаскивайте слова внутри модального окна.</li>
+        </ul>
+        <app-words-chips [form]="form" [languageName]="languageName" [maxWordsListLength]="maxWordsListLength"></app-words-chips>
+    </mat-card>
+    <button class="button button_blue" mat-raised-button color="accent" type="submit">Сохранить ({{languageName}})</button>
+    <mat-error class="error" *ngIf="form.errors">Произошла ошибка. Повторите позже.</mat-error>
+</form>

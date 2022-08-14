@@ -1,0 +1,12 @@
+<div class="dialog-title" mat-dialog-title>Удаление атрибутов страницы</div>
+<aside class="separator -type-delete-page"></aside>
+<mat-dialog-content class="delete-page-dialog-content" matDialogContent>
+    <img class="delete-page-dialog-content__icon" src="../../../../assets/images/question-icon.svg">
+    <div class="delete-page-dialog-content__text">Вы действительно хотите удалить атрибуты для страницы<br>{{pageName}}?</div>
+</mat-dialog-content>
+<aside class="separator separator_bottom"></aside>
+<mat-dialog-actions>
+    <button class="button button_blue" mat-stroked-button (click)="deletePage()">Удалить</button>
+    <button class="button" matDialogClose mat-stroked-button (click)="dialog.close(false)">Отменить</button>
+</mat-dialog-actions>
+<mat-error *ngIf="isError">Произошла ошибка. Повторите позже.</mat-error>

@@ -1,0 +1,57 @@
+{
+  "urls": [
+    "https://www.travelline.ru/secure/Extranet/#/RoomTypes",
+    "https://www.travelline.ru/secure/Extranet/#/RoomTypeQuotas",
+    "https://www.travelline.ru/secure/Extranet/#/SpecialOffers",
+    "https://www.travelline.ru/secure/Extranet/#/Promotions",
+    "https://www.travelline.ru/secure/Extranet/#/RateLevels",
+    "https://www.travelline.ru/secure/Extranet/#/ActivityLog",
+
+    "https://www.travelline.ru/secure/Extranet/#/HotelSettings",
+    "https://www.travelline.ru/secure/Extranet/#/MirCashback",
+    "https://www.travelline.ru/secure/Extranet/#/BankDetails",
+    "https://www.travelline.ru/secure/Extranet/#/TaxationSettings",
+    "https://www.travelline.ru/secure/Extranet/#/PaymentMethods",
+    "https://www.travelline.ru/secure/Extranet/#/GuestMessages",
+    "https://www.travelline.ru/secure/Extranet/#/ExtraStayRules",
+    "https://www.travelline.ru/secure/Extranet/#/CancellationRules",
+    "https://www.travelline.ru/secure/Extranet/#/Options",
+    "https://www.travelline.ru/secure/Extranet/#/Transfers",
+    "https://www.travelline.ru/secure/Extranet/#/HotelInfo",
+    "https://www.travelline.ru/secure/Extranet/#/Translation",
+    "https://www.travelline.ru/secure/Extranet/#/Proxy/AccessCodes.aspx",
+    "https://www.travelline.ru/secure/Extranet/#/RoundingRules",
+
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsReservations",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsReceptionService",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsReport",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsNotes",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsPlacement",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsExtendedHousekeeping",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsGuests",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsCompanies",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsFinance",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsHotelSettings",
+    "https://www.travelline.ru/secure/webpms/extranet/#/WebPmsInitialSettings",
+
+    "https://www.travelline.ru/secure/opportunity/#/opportunity/Settings"
+  ],
+  "selectors": [
+    {
+      "tag": "custom",
+      "weight": 100
+    },
+    {
+      "tag": "h1",
+      "weight": 10
+    },
+    {
+      "tag": "tl-form-group-name",
+      "weight": 9
+    },
+    {
+      "tag": "tl-form-item-name",
+      "weight": 8
+    }
+  ]
+}
